@@ -93,15 +93,15 @@ const FileUpload = () => {
         <GoogleAuth onSignIn={handleSignIn} />
       </div>
       <div className="mb-3">
-        <label htmlFor="ownerDirectory" className="form-label">Owner Directory</label>
+        <label htmlFor="ownerDirectory" className="form-label">Owner Directory <span style={{ color: 'red' }}>*</span></label>
         <input className="form-control" type="file" id="ownerDirectory" onChange={(e) => handleFileChange(e, setOwnerDirectory)} />
       </div>
       <div className="mb-3">
-        <label htmlFor="tenantDirectory" className="form-label">Tenant Directory</label>
+        <label htmlFor="tenantDirectory" className="form-label">Tenant Directory <span style={{ color: 'red' }}>*</span></label>
         <input className="form-control" type="file" id="tenantDirectory" onChange={(e) => handleFileChange(e, setTenantDirectory)} />
       </div>
       <div className="mb-3">
-        <label htmlFor="propertyDirectory" className="form-label">Property Directory</label>
+        <label htmlFor="propertyDirectory" className="form-label">Property Directory <span style={{ color: 'red' }}>*</span></label>
         <input className="form-control" type="file" id="propertyDirectory" onChange={(e) => handleFileChange(e, setPropertyDirectory)} />
       </div>
       <button className="btn btn-primary" onClick={handleSubmit} disabled={!ownerDirectory || !tenantDirectory || !propertyDirectory}>Upload and Notify</button>

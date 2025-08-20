@@ -13,7 +13,7 @@ const GoogleAuth = ({ onSignIn }) => {
   });
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       {isSignedIn ? (
         <p>You are now signed in!</p>
       ) : (
